@@ -1,0 +1,26 @@
+# *NEVER* check in this file to a repo if it has creds in it
+# source from an env variable.
+aws_access_key = "${env.AWS_ACCESS_KEY}"
+aws_secret_key = "${env.AWS_SECRET_KEY}"
+
+# set the region for the resources to be created
+aws_region = "eu-west-1"
+
+# Set up your tagging as needed
+tag_Name = "secure-cdn"
+tag_Owner = "yourteam@exampl.com"
+
+# SSL cert from ACM ARN for deploying on Cloudfront
+acm_ssl_cert = "arn:aws:acm:us-east-1:123456789101:certificate/aaaaaaaa-bbbbb-cccc-dddd-123456789101"
+
+# Name for creating the S3 bucket
+bucket_name = "cdn.example.com"
+
+# origin ID is the bucket name with S3- prepended
+s3_origin_id = "S3-cdn.example.com"
+
+# Origin domain Name is the full S3 bucket URL
+origin_domain_name = "cdn.example.com.s3.amazonaws.com"
+
+# any aliases you wish to configure
+domain_aliases = "cdn.example.com,images.example.com"
